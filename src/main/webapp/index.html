@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>ToDo Workshop with TimeTracker</title>
+    <script src="https://fer-api.coderslab.pl/bootstrap/js/index.min.js"></script>
+    <script>new CL({
+        title: "ToDo App with TimeTracker",
+        path: ["Python", "Warsztat"],
+        fontAwesome: true
+    });</script>
+
+</head>
+<body>
+<main id="app" class="js-tasks-list container mb-5">
+
+    <!--  adding new task-->
+    <div class="card shadow">
+        <div class="card-body">
+            <h1 class="card-title">New task</h1>
+            <form class="js-task-adding-form">
+                <div id="taskTitleError" class="text-danger d-none">title needs to be at least 5 characters long</div>
+                <div class="form-group">
+                    <input type="text"
+                           id="taskTitle"
+                           class="form-control"
+                           name="title"
+                           placeholder="Title"
+                           minlength="5"/>
+                </div>
+                <div id="taskDescriptionError" class="text-danger d-none">description needs to be at least 5 characters
+                    long
+                </div>
+                <div class="form-group">
+                    <input type="text"
+                           id="taskDescription"
+                           class="form-control"
+                           name="description"
+                           placeholder="Description"
+                           minlength="5"/>
+                </div>
+                <button id="addTask" type="button" class="btn btn-info">
+                    Add task
+                    <i class="fas fa-plus-circle ml-1"></i>
+                </button>
+            </form>
+            <div id="taskAddedSuccess" class="text-success d-none" style="opacity: 1">task added successfully
+            </div>
+        </div>
+    </div>
+    <!--end of new task-->
+
+    <script src="js/script.js" defer></script>
+</main>
+</body>
+</html>
